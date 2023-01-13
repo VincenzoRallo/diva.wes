@@ -25,11 +25,11 @@ rule all:
          # Coverage statistics on ccds regions
 #        expand("reads/recalibrated/{sample.sample}.ccds.dedup.recal.hs.txt",sample=samples.reset_index().itertuples()),
          # Coverage with GATK DepthOfCoverage
-#        expand("reads/recalibrated/{sample.sample}.sample_gene_summary", sample=samples.reset_index().itertuples()),
+        expand("reads/recalibrated/{sample.sample}.sample_gene_summary", sample=samples.reset_index().itertuples()),
          # Interactive HTML QC report
-#        "qc/multiqc.html",
+        "qc/multiqc.html",
          # Check relationships between each pair of samples
-#        "qc/kinship/multiqc_heatmap.html",
+        "qc/kinship/multiqc_heatmap.html",
          # Coverage plot for selected genes
 #        "qc/bedtools/heatmap_enriched_regions.png",
          # Per sample g.vcf
@@ -39,9 +39,9 @@ rule all:
          # Variant calling on mtDNA - experimental
 #        "variant_calling/mtDNA.vcf",
          # VCF before recalibration
-#        "variant_calling/all.vcf.gz",
+        "variant_calling/all.vcf.gz",
          # VCF after recalibration
-#        "variant_calling/all.snp_recalibrated.indel_recalibrated.vcf.gz",
+        "variant_calling/all.snp_recalibrated.indel_recalibrated.vcf.gz",
          # Final VCF, after genotype count
 #        "variant_calling/all.snp_recalibrated.indel_recalibrated.caseControls.vcf.gz",
 
